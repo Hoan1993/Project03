@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    url: jdbc:h2:tcp://localhost/~/overwatch
+
+  mvc:
+    view:
+      prefix: /templates/views/
+      suffix: .html
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.format_sql: true
+
+  thymeleaf:
+    cache: false
+
+logging.level:
+  org.hibernate.SQL: debug
+  org.hibernate.type: trace
+
+server:
+  port: 8585
